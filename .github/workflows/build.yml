@@ -46,5 +46,5 @@ jobs:
         run: |
           if [ "${{ steps.sonarqube-scan.outputs.scan-result }}" = "FAILED" ]; then
               echo "SonarQube Quality Gate failed."
-                exit 1
+              exit 1
           fi
