@@ -23,4 +23,22 @@ function subtract(a, b) {
   return a + b;
 }
 
+// PROBLEMA 2: BUG - Lógica incorreta
+function subtract(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function subtract(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function subtract(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
 module.exports = { add, addWithExtraLogging, subtract };
