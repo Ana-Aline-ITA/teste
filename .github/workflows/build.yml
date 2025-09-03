@@ -42,8 +42,9 @@ jobs:
             -Dsonar.qualitygate.wait=true # Manda o scanner esperar pelo resultado
       
       - name: SonarQube Quality Gate check
-        uses: SonarSource/sonarqube-quality-gate-action@v1
-        continue-on-error: ${{ startsWith(github.head_ref, 'hotfix/') }}
-        timeout-minutes: 5
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        if: ${{ !startsWith(github.head_ref, 'hotfix/') }}
+        run: |
+          if [ "${{ steps.sonarqube-scan.outputs.scan-result }}" = "FAILED" ]; then
+              echo "SonarQube Quality Gate failed."
+                exit 1
+          fi
