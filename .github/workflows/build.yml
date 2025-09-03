@@ -42,8 +42,13 @@ jobs:
             -Dsonar.qualitygate.wait=true # Manda o scanner esperar pelo resultado
       
       - name: SonarQube Quality Gate check
-        if: ${{ !startsWith(github.head_ref, 'hotfix/') }}
         run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+
+          if [[ "${BRANCH_NAME,,}" == hotfix/* ]]; then
+            echo "Skipping Quality Gate check for hotfix branch."
+            exit 0
+          fi
           if [ "${{ steps.sonarqube-scan.outputs.scan-result }}" = "FAILED" ]; then
               echo "SonarQube Quality Gate failed."
               exit 1
