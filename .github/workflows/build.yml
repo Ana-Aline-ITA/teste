@@ -1,7 +1,7 @@
 name: Build
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -27,20 +27,20 @@ jobs:
       - name: Run tests and generate coverage
         run: npm test
       
+      - name: Normalize branch name
+        id: vars
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "branch_name_lower=${BRANCH_NAME,,}" >> $GITHUB_OUTPUT
+          
       - name: SonarQube Scan
+        if: startsWith(steps.vars.outputs.branch_name_lower, 'hotfix/') == false
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      # If you wish to fail your job when the Quality Gate is red, uncomment the
-      # following lines. This would typically be used to fail a deployment.
         with:
           args: >
             -Dsonar.projectKey=teste
             -Dsonar.sources=.
-      
-      - name: SonarQube Quality Gate check
-        uses: SonarSource/sonarqube-quality-gate-action@v1
-        timeout-minutes: 5
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            -Dsonar.qualitygate.wait=true

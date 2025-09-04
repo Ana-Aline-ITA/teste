@@ -23,4 +23,85 @@ function subtract(a, b) {
   return a + b;
 }
 
+// PROBLEMA 2: BUG - Lógica incorreta
+function a(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function b(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function c(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function d(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function e(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
+// PROBLEMA 2: BUG - Lógica incorreta
+function f(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function g(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function h(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function i(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function j(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function k(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function l(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function m(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function n(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function o(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
 module.exports = { add, addWithExtraLogging, subtract };
