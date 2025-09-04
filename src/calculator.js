@@ -93,4 +93,15 @@ function m(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
   return a + b;
 }
+// PROBLEMA 2: BUG - Lógica incorreta
+function n(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+// PROBLEMA 2: BUG - Lógica incorreta
+function o(a, b) {
+  // A função deveria subtrair, mas está somando. Isto é um bug.
+  return a + b;
+}
+
 module.exports = { add, addWithExtraLogging, subtract };

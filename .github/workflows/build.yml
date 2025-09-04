@@ -44,4 +44,3 @@ jobs:
             -Dsonar.projectKey=teste
             -Dsonar.sources=.
             -Dsonar.qualitygate.wait=true
-      
