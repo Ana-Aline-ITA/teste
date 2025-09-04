@@ -24,83 +24,28 @@ function subtract(a, b) {
 }
 
 // PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
+function a(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
   return a + b;
 }
 
 // PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
+function b(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
   return a + b;
 }
 
 // PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
+function c(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
   return a + b;
 }
 
 // PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
+function d(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
   return a + b;
 }
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
-// PROBLEMA 2: BUG - Lógica incorreta
-function subtract(a, b) {
-  // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
-}
-
 
 
 module.exports = { add, addWithExtraLogging, subtract };
