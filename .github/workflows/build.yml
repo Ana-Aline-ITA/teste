@@ -27,7 +27,14 @@ jobs:
       - name: Run tests and generate coverage
         run: npm test
       
+      - name: Normalize branch name
+        id: vars
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "branch_name_lower=${BRANCH_NAME,,}" >> $GITHUB_OUTPUT
+          
       - name: SonarQube Scan
+        if: startsWith(steps.vars.outputs.branch_name_lower, 'hotfix/') == false
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -36,16 +43,17 @@ jobs:
           args: >
             -Dsonar.projectKey=teste
             -Dsonar.sources=.
+            -Dsonar.qualitygate.wait=true
       
-      - name: SonarQube Quality Gate check
-        run: |
-          BRANCH_NAME="${{ github.head_ref }}"
+      # - name: SonarQube Quality Gate check
+      #   run: |
+      #     BRANCH_NAME="${{ github.head_ref }}"
 
-          if [[ "${BRANCH_NAME,,}" == hotfix/* ]]; then
-            echo "Skipping Quality Gate check for hotfix branch."
-            exit 0
-          fi
-          if [ "${{ steps.sonarqube-scan.outputs.scan-result }}" = "FAILED" ]; then
-              echo "SonarQube Quality Gate failed."
-              exit 1
-          fi
+      #     if [[ "${BRANCH_NAME,,}" == hotfix/* ]]; then
+      #       echo "Skipping Quality Gate check for hotfix branch."
+      #       exit 0
+      #     fi
+      #     if [ "${{ steps.sonarqube-scan.outputs.scan-result }}" = "FAILED" ]; then
+      #         echo "SonarQube Quality Gate failed."
+      #         exit 1
+      #     fi
