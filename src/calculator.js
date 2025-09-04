@@ -102,6 +102,7 @@ function n(a, b) {
 function o(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
   return a + b;
+  return a + b;
 }
 
 module.exports = { add, addWithExtraLogging, subtract };
