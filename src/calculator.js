@@ -101,7 +101,7 @@ function n(a, b) {
 // PROBLEMA 2: BUG - Lógica incorreta
 function o(a, b) {
   // A função deveria subtrair, mas está somando. Isto é um bug.
-  return a + b;
+  let c = 2;
   return a + b;
 }
 
